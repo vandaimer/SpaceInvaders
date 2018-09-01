@@ -3,7 +3,9 @@ extends Node2D
 var pre_enemie_shot = preload("res://scenes/EnemieShot.tscn")
 
 var dir = 1
-const squad_translate_vector = Vector2(6, 0)
+const squad_translate_to_right_left = Vector2(6, 0)
+const squad_translate_to_down = Vector2(0, 8)
+
 
 func _ready():
 	get_node("TimerShot").start()
@@ -20,10 +22,18 @@ func _on_TimerShot_timeout():
 	shoot()
 
 func _on_TimerMove_timeout():
-	if global_position.x == 36:
-		dir = -1
+	var to_down = false
 
-	if global_position.x == -30:
-		dir = 1
+	for enemie in get_node("Enemies").get_children():
+		if enemie.global_position.x > 170 and dir > 0:
+			dir = -1
+			to_down = true
 
-	translate(squad_translate_vector * dir)
+		if enemie.global_position.x < 10 and dir < 0:
+			dir = 1
+			to_down = true
+
+	if to_down:
+		translate(squad_translate_to_down)
+	else:
+		translate(squad_translate_to_right_left * dir)
