@@ -25,6 +25,7 @@ func _on_TimerMove_timeout():
 	var to_down = false
 
 	for enemie in get_node("Enemies").get_children():
+		enemie.next_frame()
 		if enemie.global_position.x > 170 and dir > 0:
 			dir = -1
 			to_down = true
