@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/InvaderBullet.wav-3194559de17189cf783fc7c92fec059e.sample"
+
+[deps]
+
+source_file="res://Assets/samples/InvaderBullet.wav"
+dest_files=[ "res://.import/InvaderBullet.wav-3194559de17189cf783fc7c92fec059e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

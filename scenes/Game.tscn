@@ -1,0 +1,209 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scripts/Ship.gd" type="Script" id=1]
+[ext_resource path="res://Assets/sprites/Ship-sheet.png" type="Texture" id=2]
+[ext_resource path="res://scripts/EnemieGroup.gd" type="Script" id=3]
+[ext_resource path="res://scenes/Enemie.tscn" type="PackedScene" id=4]
+
+[node name="Game" type="Node" index="0"]
+
+[node name="Ship" type="Area2D" parent="." index="0"]
+
+editor/display_folded = true
+position = Vector2( 90, 268 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_mask = 0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Audio Bus", "Collision", "Material", "Transform", "Visibility" ]
+
+[node name="Sprite" type="Sprite" parent="Ship" index="0"]
+
+position = Vector2( -7.62939e-06, -0.242859 )
+texture = ExtResource( 2 )
+hframes = 3
+_sections_unfolded = [ "Animation", "Offset", "Region" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Ship" index="1"]
+
+position = Vector2( -7.62939e-06, -0.182129 )
+build_mode = 0
+polygon = PoolVector2Array( 7.57899, -0.997528, 3.2083, -1.54385, 1.99422, -1.84738, 1.44788, -3.06146, 1.14436, -4.09341, 0.173103, -4.09341, -1.3445, -4.09341, -1.89083, -2.45441, -2.01224, -1.30103, -3.89407, -1.36176, -6.56503, -1.78668, -7.23278, -1.42245, -7.4756, -0.269073, -7.5363, 1.43063, -7.5363, 3.13034, -7.4756, 3.98022, 7.51828, 3.98022, 7.57899, 1.73416 )
+
+[node name="EnemieGroup" type="Node2D" parent="." index="1"]
+
+position = Vector2( 0, -12 )
+script = ExtResource( 3 )
+
+[node name="Enemies" type="Node" parent="EnemieGroup" index="0"]
+
+editor/display_folded = true
+
+[node name="Enemie" parent="EnemieGroup/Enemies" index="0" instance=ExtResource( 4 )]
+
+position = Vector2( 32, 24 )
+
+[node name="Enemie2" parent="EnemieGroup/Enemies" index="1" instance=ExtResource( 4 )]
+
+position = Vector2( 48, 24 )
+
+[node name="Enemie3" parent="EnemieGroup/Enemies" index="2" instance=ExtResource( 4 )]
+
+position = Vector2( 64, 24 )
+
+[node name="Enemie4" parent="EnemieGroup/Enemies" index="3" instance=ExtResource( 4 )]
+
+position = Vector2( 80, 24 )
+
+[node name="Enemie5" parent="EnemieGroup/Enemies" index="4" instance=ExtResource( 4 )]
+
+position = Vector2( 96, 24 )
+
+[node name="Enemie6" parent="EnemieGroup/Enemies" index="5" instance=ExtResource( 4 )]
+
+position = Vector2( 112, 24 )
+
+[node name="Enemie7" parent="EnemieGroup/Enemies" index="6" instance=ExtResource( 4 )]
+
+position = Vector2( 128, 24 )
+
+[node name="Enemie8" parent="EnemieGroup/Enemies" index="7" instance=ExtResource( 4 )]
+
+position = Vector2( 144, 24 )
+
+[node name="Enemie9" parent="EnemieGroup/Enemies" index="8" instance=ExtResource( 4 )]
+
+position = Vector2( 32, 36 )
+tipo = 1
+
+[node name="Enemie10" parent="EnemieGroup/Enemies" index="9" instance=ExtResource( 4 )]
+
+position = Vector2( 48, 36 )
+tipo = 1
+
+[node name="Enemie11" parent="EnemieGroup/Enemies" index="10" instance=ExtResource( 4 )]
+
+position = Vector2( 64, 36 )
+tipo = 1
+
+[node name="Enemie12" parent="EnemieGroup/Enemies" index="11" instance=ExtResource( 4 )]
+
+position = Vector2( 80, 36 )
+tipo = 1
+
+[node name="Enemie13" parent="EnemieGroup/Enemies" index="12" instance=ExtResource( 4 )]
+
+position = Vector2( 96, 36 )
+tipo = 1
+
+[node name="Enemie14" parent="EnemieGroup/Enemies" index="13" instance=ExtResource( 4 )]
+
+position = Vector2( 112, 36 )
+tipo = 1
+
+[node name="Enemie15" parent="EnemieGroup/Enemies" index="14" instance=ExtResource( 4 )]
+
+position = Vector2( 128, 36 )
+tipo = 1
+
+[node name="Enemie16" parent="EnemieGroup/Enemies" index="15" instance=ExtResource( 4 )]
+
+position = Vector2( 144, 36 )
+tipo = 1
+
+[node name="Enemie17" parent="EnemieGroup/Enemies" index="16" instance=ExtResource( 4 )]
+
+position = Vector2( 32, 48 )
+tipo = 2
+
+[node name="Enemie18" parent="EnemieGroup/Enemies" index="17" instance=ExtResource( 4 )]
+
+position = Vector2( 48, 48 )
+tipo = 2
+
+[node name="Enemie19" parent="EnemieGroup/Enemies" index="18" instance=ExtResource( 4 )]
+
+position = Vector2( 64, 48 )
+tipo = 2
+
+[node name="Enemie20" parent="EnemieGroup/Enemies" index="19" instance=ExtResource( 4 )]
+
+position = Vector2( 80, 48 )
+tipo = 2
+
+[node name="Enemie21" parent="EnemieGroup/Enemies" index="20" instance=ExtResource( 4 )]
+
+position = Vector2( 96, 48 )
+tipo = 2
+
+[node name="Enemie22" parent="EnemieGroup/Enemies" index="21" instance=ExtResource( 4 )]
+
+position = Vector2( 112, 48 )
+tipo = 2
+
+[node name="Enemie23" parent="EnemieGroup/Enemies" index="22" instance=ExtResource( 4 )]
+
+position = Vector2( 128, 48 )
+tipo = 2
+
+[node name="Enemie24" parent="EnemieGroup/Enemies" index="23" instance=ExtResource( 4 )]
+
+position = Vector2( 144, 48 )
+tipo = 2
+
+[node name="Enemie25" parent="EnemieGroup/Enemies" index="24" instance=ExtResource( 4 )]
+
+position = Vector2( 32, 60 )
+tipo = 2
+
+[node name="Enemie26" parent="EnemieGroup/Enemies" index="25" instance=ExtResource( 4 )]
+
+position = Vector2( 48, 60 )
+tipo = 2
+
+[node name="Enemie27" parent="EnemieGroup/Enemies" index="26" instance=ExtResource( 4 )]
+
+position = Vector2( 64, 60 )
+tipo = 2
+
+[node name="Enemie28" parent="EnemieGroup/Enemies" index="27" instance=ExtResource( 4 )]
+
+position = Vector2( 80, 60 )
+tipo = 2
+
+[node name="Enemie29" parent="EnemieGroup/Enemies" index="28" instance=ExtResource( 4 )]
+
+position = Vector2( 96, 60 )
+tipo = 2
+
+[node name="Enemie30" parent="EnemieGroup/Enemies" index="29" instance=ExtResource( 4 )]
+
+position = Vector2( 112, 60 )
+tipo = 2
+
+[node name="Enemie31" parent="EnemieGroup/Enemies" index="30" instance=ExtResource( 4 )]
+
+position = Vector2( 128, 60 )
+tipo = 2
+
+[node name="Enemie32" parent="EnemieGroup/Enemies" index="31" instance=ExtResource( 4 )]
+
+position = Vector2( 144, 60 )
+tipo = 2
+
+[node name="TimerShot" type="Timer" parent="EnemieGroup" index="1"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+_sections_unfolded = [ "Pause" ]
+
+[connection signal="timeout" from="EnemieGroup/TimerShot" to="EnemieGroup" method="_on_TimerShot_timeout"]
+
+
