@@ -36,5 +36,9 @@ func _on_TimerMove_timeout():
 
 	if to_down:
 		translate(squad_translate_to_down)
+
+		var current_time = get_node("TimerMove").get_wait_time()
+		if current_time > .2:
+			get_node("TimerMove").set_wait_time(current_time - .1)
 	else:
 		translate(squad_translate_to_right_left * dir)
